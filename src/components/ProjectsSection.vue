@@ -61,11 +61,11 @@ const github = ['JurisAI · TypeScript', 'ListfyApp · Dart', 'ListfyAPI · C#',
           url="danilohonda.github.io/dento-deepdive"
           tag="AGENTES · IA"
           title="Dento"
-          desc="Agente pessoal multiagente com memória de longo prazo, que apoia a gestão de finanças, agenda, notícias e investimentos."
+          desc="Assistente pessoal que roda no meu servidor e funciona como app no celular, com agenda, notícias do dia, gastos e conversas com o agente Hermes."
           :bullets="[
-            'Orquestração multiagente com OMP e Hermes.',
-            'Segundo cérebro: persistência e recuperação de memória entre conversas.',
-            'Gestão integrada de finanças, agenda, notícias e investimentos em um só lugar.'
+            'Agenda de dia, semana e mês, com eventos criados no app e leitura do Google Agenda.',
+            'Notícias por tema (clima, IA, política e mercado) e painel de gastos com a origem de cada transação.',
+            'Em construção: lembretes, acompanhamento de investimentos, resumo diário e salvamento no segundo cérebro.'
           ]"
           :chips="['Python', 'LLM', 'OMP', 'Hermes', 'Memória persistente']"
           :links="[
