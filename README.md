@@ -23,7 +23,7 @@ npm run preview
 O deploy é automático pelo GitHub Pages: cada push na branch `main` roda
 `.github/workflows/deploy.yml`, que compila o projeto e publica a pasta `dist`.
 
-O site fica em https://danilohonda.github.io/portfolio/. O subcaminho `/portfolio/`
+O site fica em https://danilohonda.github.io/portifolio/. O subcaminho `/portifolio/`
 está definido em `vite.config.js` (só vale no build). Se o repositório mudar de nome,
 ajuste a `base` ali.
 
