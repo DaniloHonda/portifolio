@@ -19,32 +19,35 @@ const github = ['JurisAI · TypeScript', 'ListfyApp · Dart', 'ListfyAPI · C#',
         <ProjectCard
           big
           :screen-height="340"
-          url="cpdiabeticretinopathy · repositório privado"
+          url="danilohonda.github.io/cpdiabeticretinopathy-demo"
           tag="TCC · VISÃO COMPUTACIONAL"
           title="Retinopatia diabética"
-          desc="Classifica o grau da doença em imagens de fundo de olho e compara redes de Deep Learning com LLMs multimodais."
+          desc="Classifica os cinco estágios da doença em fotos de fundo de olho e compara um modelo treinado para a tarefa com LLMs multimodais de uso geral."
           :bullets="[
-            'Três arquiteturas treinadas e avaliadas: DenseNet121, U-Net e ConvNeXt-Small.',
-            'O melhor modelo chegou a 82,2% de acurácia e Kappa quadrático ponderado de 0,84 em 5.268 imagens de teste.',
-            'Comparação direta com LLMs multimodais na mesma tarefa.'
+            'ConvNeXt-Small como regressão ordinal, com pré-processamento Ben Graham e ajuste de limiares pelo QWK.',
+            'Acurácia de 83% e QWK de 0,83 em 5.270 imagens de teste, contra QWK de 0,28 a 0,45 para os LLMs.',
+            'Deep dive com método, resultados por classe, análise de erros e limitações.'
           ]"
-          :chips="['Python', 'PyTorch', 'MONAI', 'Deep Learning', 'Visão computacional']"
-          :links="[{ label: 'repositório privado' }]"
+          :chips="['Python', 'PyTorch', 'timm', 'Deep Learning', 'Visão computacional']"
+          :links="[
+            { label: 'abrir deep dive ↗', href: 'https://danilohonda.github.io/cpdiabeticretinopathy-demo/', primary: true },
+            { label: 'repositório privado' }
+          ]"
         >
           <template #screen>
             <div style="height:100%;display:flex;align-items:center;justify-content:center;gap:56px;padding:0 32px">
               <div class="retina"></div>
               <div style="display:flex;flex-direction:column;gap:16px">
                 <div>
-                  <div class="stat">82,2%</div>
-                  <div class="cap" style="margin:2px 0 0">ACURÁCIA · MELHOR MODELO</div>
+                  <div class="stat">83%</div>
+                  <div class="cap" style="margin:2px 0 0">ACURÁCIA · CONVNEXT-SMALL</div>
                 </div>
                 <div>
-                  <div class="stat">0,84</div>
+                  <div class="stat">0,83</div>
                   <div class="cap" style="margin:2px 0 0">KAPPA QUADRÁTICO PONDERADO</div>
                 </div>
                 <div>
-                  <div class="stat">5.268</div>
+                  <div class="stat">5.270</div>
                   <div class="cap" style="margin:2px 0 0">IMAGENS DE TESTE</div>
                 </div>
               </div>
