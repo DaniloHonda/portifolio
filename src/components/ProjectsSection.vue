@@ -58,7 +58,7 @@ const github = ['JurisAI · TypeScript', 'ListfyApp · Dart', 'ListfyAPI · C#',
         <ProjectCard
           big
           :screen-height="340"
-          url="dento · repositório privado"
+          url="danilohonda.github.io/dento-deepdive"
           tag="AGENTES · IA"
           title="Dento"
           desc="Agente pessoal multiagente com memória de longo prazo, que apoia a gestão de finanças, agenda, notícias e investimentos."
@@ -68,7 +68,10 @@ const github = ['JurisAI · TypeScript', 'ListfyApp · Dart', 'ListfyAPI · C#',
             'Gestão integrada de finanças, agenda, notícias e investimentos em um só lugar.'
           ]"
           :chips="['Python', 'LLM', 'OMP', 'Hermes', 'Memória persistente']"
-          :links="[{ label: 'repositório privado' }]"
+          :links="[
+            { label: 'abrir deep dive ↗', href: 'https://danilohonda.github.io/dento-deepdive/', primary: true },
+            { label: 'repositório privado' }
+          ]"
         >
           <template #screen>
             <div class="ln big" style="transform:rotate(158.2deg)"></div>
