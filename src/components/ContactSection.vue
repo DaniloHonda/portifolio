@@ -1,5 +1,8 @@
 <script setup>
 import { contacts } from '../data/site.js'
+
+const emailLink = contacts.find((c) => c.href.startsWith('mailto:'))
+const email = emailLink ? emailLink.href.replace('mailto:', '') : ''
 </script>
 
 <template>
@@ -17,10 +20,13 @@ import { contacts } from '../data/site.js'
           class="lk"
           :class="{ pri: c.primary }"
           :href="c.href"
-          target="_blank"
-          rel="noopener"
+          :target="c.href.startsWith('mailto:') ? undefined : '_blank'"
+          :rel="c.href.startsWith('mailto:') ? undefined : 'noopener'"
           >{{ c.label }}</a
         >
+        <p v-if="email" class="mail" style="margin:14px 0 0;font-family:'JetBrains Mono',monospace;font-size:14px;color:#D4D0C6;user-select:all">
+          {{ email }}
+        </p>
       </div>
     </div>
   </section>
