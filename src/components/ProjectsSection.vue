@@ -74,18 +74,54 @@ const github = ['JurisAI · TypeScript', 'ListfyApp · Dart', 'ListfyAPI · C#',
           ]"
         >
           <template #screen>
-            <div class="ln big" style="transform:rotate(158.2deg)"></div>
-            <div class="ln big" style="transform:rotate(-158.2deg)"></div>
-            <div class="ln big" style="transform:rotate(21.8deg)"></div>
-            <div class="ln big" style="transform:rotate(-21.8deg)"></div>
-            <div class="nd c" style="left:50%;top:50%;font-size:13px;padding:9px 14px">orquestrador</div>
-            <div class="nd" style="left:calc(50% - 200px);top:calc(50% - 80px);font-size:12px">finanças</div>
-            <div class="nd" style="left:calc(50% - 200px);top:calc(50% + 80px);font-size:12px">agenda</div>
-            <div class="nd" style="left:calc(50% + 200px);top:calc(50% - 80px);font-size:12px">notícias</div>
-            <div class="nd" style="left:calc(50% + 200px);top:calc(50% + 80px);font-size:12px">investimentos</div>
-            <div class="cap" style="position:absolute;left:16px;right:16px;bottom:14px;margin:0;text-align:center">
-              SEGUNDO CÉREBRO · MEMÓRIA PERSISTENTE
-            </div>
+            <svg viewBox="0 0 700 340" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%;display:block" role="img" aria-label="Dento orquestra agentes: agenda, notícias, finanças, segundo cérebro e Hermes">
+              <defs>
+                <radialGradient id="dentoOrb" cx="40%" cy="35%" r="70%">
+                  <stop offset="0%" stop-color="#FFB4A8" />
+                  <stop offset="45%" stop-color="#E5383B" />
+                  <stop offset="100%" stop-color="#5A1A2E" />
+                </radialGradient>
+                <filter id="dentoGlow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="8" result="b" />
+                  <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+                </filter>
+              </defs>
+              <!-- conexões do orquestrador -->
+              <g stroke="#2A2C3D" stroke-width="1.5" fill="none">
+                <path d="M350 170 L350 62" />
+                <path d="M350 170 L150 120" />
+                <path d="M350 170 L150 228" />
+                <path d="M350 170 L550 120" />
+                <path d="M350 170 L550 228" />
+              </g>
+              <g stroke="#3FB6C4" stroke-width="1.5" fill="none" stroke-dasharray="4 6" opacity="0.8">
+                <path d="M350 170 L150 120" />
+                <path d="M350 170 L550 228" />
+              </g>
+              <!-- balão do usuário e resposta do assistente -->
+              <rect x="22" y="22" width="190" height="34" rx="17" fill="#1E1F2B" />
+              <text x="117" y="44" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#D4D0C6">Tenho algo amanhã?</text>
+              <rect x="470" y="268" width="210" height="46" rx="14" fill="#0A0A0F" stroke="#E5383B" stroke-opacity="0.6" />
+              <text x="575" y="290" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#D4D0C6">2 eventos e 1 notícia relevante</text>
+              <text x="575" y="306" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#7A7D90">quer que eu marque um lembrete?</text>
+              <!-- orquestrador -->
+              <circle cx="350" cy="170" r="66" fill="none" stroke="#E5383B" stroke-opacity="0.25" />
+              <circle cx="350" cy="170" r="48" fill="url(#dentoOrb)" filter="url(#dentoGlow)" />
+              <text x="350" y="176" text-anchor="middle" font-family="Anton, sans-serif" font-size="22" fill="#040406" letter-spacing="1">DENTO</text>
+              <!-- agentes -->
+              <g font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">
+                <rect x="290" y="34" width="120" height="30" rx="15" fill="#0A0A0F" stroke="#E5383B" />
+                <text x="350" y="54" fill="#D4D0C6">Hermes · LLM</text>
+                <rect x="80" y="104" width="140" height="32" rx="16" fill="#0A0A0F" stroke="#3FB6C4" />
+                <text x="150" y="125" fill="#D4D0C6">agenda</text>
+                <rect x="80" y="212" width="140" height="32" rx="16" fill="#0A0A0F" stroke="#E5383B" />
+                <text x="150" y="233" fill="#D4D0C6">finanças</text>
+                <rect x="480" y="104" width="140" height="32" rx="16" fill="#0A0A0F" stroke="#8F7CF0" />
+                <text x="550" y="125" fill="#D4D0C6">notícias</text>
+                <rect x="470" y="212" width="160" height="32" rx="16" fill="#0A0A0F" stroke="#8F7CF0" />
+                <text x="550" y="233" fill="#D4D0C6">segundo cérebro</text>
+              </g>
+            </svg>
           </template>
         </ProjectCard>
       </div>
@@ -130,15 +166,30 @@ const github = ['JurisAI · TypeScript', 'ListfyApp · Dart', 'ListfyAPI · C#',
           :links="[{ label: 'código ↗', href: 'https://github.com/devBrait/nutrihub-ai-api' }]"
         >
           <template #screen>
-            <div style="height:100%;display:flex;align-items:center;justify-content:center;gap:32px;padding:0 28px">
-              <div class="plate"></div>
-              <div style="flex:1;max-width:230px">
-                <div class="cap">MACROS ESTIMADOS PELA IA</div>
-                <div class="cap" style="margin:10px 0 0">PROTEÍNA</div><div class="mc"><i style="width:62%"></i></div>
-                <div class="cap" style="margin:0">CARBOIDRATO</div><div class="mc"><i style="width:82%"></i></div>
-                <div class="cap" style="margin:0">GORDURA</div><div class="mc"><i style="width:38%"></i></div>
-              </div>
-            </div>
+            <svg viewBox="0 0 700 340" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%;display:block" role="img" aria-label="Foto de refeição analisada pela IA, com estimativa de calorias e macronutrientes (exemplo ilustrativo)">
+              <!-- prato visto de cima, com três partes -->
+              <circle cx="200" cy="170" r="122" fill="#11121A" stroke="#2A2C3D" stroke-width="2" />
+              <circle cx="200" cy="170" r="98" fill="#1B1C27" />
+              <path d="M200 170 L200 78 A92 92 0 0 1 279.7 216 Z" fill="#E5383B" opacity="0.9" />
+              <path d="M200 170 L279.7 216 A92 92 0 0 1 120.3 216 Z" fill="#3FB6C4" opacity="0.85" />
+              <path d="M200 170 L120.3 216 A92 92 0 0 1 200 78 Z" fill="#6BBF59" opacity="0.85" />
+              <circle cx="200" cy="170" r="22" fill="#1B1C27" />
+              <g fill="#D4D0C6" opacity="0.6">
+                <circle cx="160" cy="120" r="5" /><circle cx="240" cy="110" r="4" /><circle cx="255" cy="250" r="5" />
+              </g>
+              <!-- resultado da análise -->
+              <text x="380" y="62" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1.5" fill="#7A7D90">ESTIMATIVA POR FOTO · EXEMPLO</text>
+              <text x="380" y="132" font-family="Anton, sans-serif" font-size="60" fill="#D4D0C6">520 kcal</text>
+              <g font-family="JetBrains Mono, monospace" font-size="12" fill="#D4D0C6">
+                <text x="380" y="180">proteína</text>
+                <rect x="380" y="190" width="260" height="10" fill="#1E1F2B" /><rect x="380" y="190" width="161" height="10" fill="#E5383B" />
+                <text x="380" y="222">carboidrato</text>
+                <rect x="380" y="232" width="260" height="10" fill="#1E1F2B" /><rect x="380" y="232" width="213" height="10" fill="#3FB6C4" />
+                <text x="380" y="264">gordura</text>
+                <rect x="380" y="274" width="260" height="10" fill="#1E1F2B" /><rect x="380" y="274" width="99" height="10" fill="#8F7CF0" />
+              </g>
+              <text x="380" y="318" font-family="JetBrains Mono, monospace" font-size="11" fill="#7A7D90">foto → IA → macros → dieta personalizada</text>
+            </svg>
           </template>
         </ProjectCard>
 

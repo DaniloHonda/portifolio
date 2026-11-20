@@ -34,7 +34,7 @@ export const experience = [
     date: '2023 — 2026',
     title: 'Ciência da Computação',
     org: 'UNIVERSIDADE PRESBITERIANA MACKENZIE · CONCLUSÃO EM DEZ/2026',
-    bullets: ['Inglês fluente (EF SET C2), espanhol intermediário.', 'Comunidades: Shiva Hack, The AI Collective e Builders SP.'],
+    bullets: ['Inglês fluente (EF SET C2), espanhol intermediário.'],
     chips: []
   }
 ]
